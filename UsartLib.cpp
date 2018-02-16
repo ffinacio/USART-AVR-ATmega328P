@@ -185,6 +185,5 @@ ISR(USART_RX_vect)
 {
 	cli();
 	usartLib.usartCallBack();
-	//usartLib.usartCallBack(UDR0);
 	sei();
 }
