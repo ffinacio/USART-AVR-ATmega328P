@@ -111,15 +111,6 @@ uint8_t UsartLib::usartReadString(char *data)
 	}
 	usartWriteString(newLine,2);
 	return i;
-	/*
-	for(uint8_t i=0; i<sLenght;i++)
-	{
-		data[i] = usartReadChar();
-		usartWriteChar(data[i]);
-		if(data[i] == 0x0D) i = sLenght;
-	}
-	usartWriteString("\n\r",2);
-	*/
 }
 
 void UsartLib::usartWriteChar(unsigned char data)
