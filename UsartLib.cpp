@@ -177,8 +177,8 @@ void UsartLib::usartWriteLong(long data)
 
 void UsartLib::usartAttach(void (*isr)())
 {
-	UCSR0B |= (1<<RXCIE0);				// RXCIE0 to set RX interrupt
 	usartCallBack = isr;
+	UCSR0B |= (1<<RXCIE0);				// RXCIE0 to set RX interrupt
 }
 
 ISR(USART_RX_vect)
